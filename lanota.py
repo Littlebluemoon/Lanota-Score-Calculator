@@ -69,3 +69,4 @@ else:
             f.write(str(i) + "," + str(first_note) + "," + str(cumul) + "," + str(int(cumul)) + "\n")
         else:
             f.write(str(i) + "," + str(first_note) + "," + str(cumul) + ",1000000\n")
+f.close()

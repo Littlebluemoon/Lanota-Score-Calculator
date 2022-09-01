@@ -26,11 +26,22 @@ $$\displaylines{note\textunderscore score_{i+1} = first\textunderscore note\text
 **Rapid combo score decrement:**<br/>
 If note count is odd:
 - the next note's score is decreased by $d_1 \times combo\textunderscore score\textunderscore unit$,
-- the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$;
-where
+- the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$;##
 $$\displaylines{d_1 + d_2 = cff;\\ d_1 - d_2 = 0.75;\\ cff = (note\textunderscore count) \div 4 + 1} \text{ (6)}$$
 otherwise:
 - the next note's score is decreased by $d \times combo\textunderscore score\textunderscore unit$,
 where $$d = (note\textunderscore count) \div 4 + 0.5 \text{ (7)}$$
 - Following that, all notes worth a constant point value:
-$$min\textunderscore note\textunderscore score = first\textunderscore note \textunderscore score - frac{160000}{note\textunderscore count} \text{ (8)}$$
+$$min\textunderscore note\textunderscore score = first\textunderscore note \textunderscore score - \frac{160000}{note\textunderscore count} \text{ (8)}$$
+## Program function
+### Requirements
+The program is written in Python 3.10, so Python 3.x is required to run it. No other packages is necessary.
+### Components
+**lanota.py**: The main executable file.
+**notedata.csv**: The result file, containing data regarding note count, base note score, combo score unit, tune base note score, and score progression across the song.<br/>
+Score progression includes combo count, note score, cumulative score (exact / rounded in-game which might has minor errors).<br/>
+Will be created if not exist.
+### Usage
+Launch **lanota.py**.<br/>
+Enter a single number, which is the note count of your chart.<br/>
+All the results mentioned above will be packed into **notedata.csv**.
