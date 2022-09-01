@@ -26,7 +26,7 @@ $$\displaylines{note\textunderscore score_{i+1} = first\textunderscore note\text
 **Rapid combo score decrement:**<br/>
 If note count is odd:
 - the next note's score is decreased by $d_1 \times combo\textunderscore score\textunderscore unit$,
-- the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$;##
+- the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$; where
 $$\displaylines{d_1 + d_2 = cff;\\ d_1 - d_2 = 0.75;\\ cff = (note\textunderscore count) \div 4 + 1} \text{ (6)}$$
 otherwise:
 - the next note's score is decreased by $d \times combo\textunderscore score\textunderscore unit$,
