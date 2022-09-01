@@ -15,7 +15,7 @@ Each following notes will have its value decreased by one **combo score unit**, 
 E.g. You achieved a combo of 200 before Failing a note. The next note hit will not award combo score, regardless of whether it is a Harmony or Tune note.
 3. The combo score's decreasing process carries over if you break a combo, but resumed it later.<br/>
 E.g. You achieved a combo of 5 before Failing a note. As per the rule mentioned in **1.**, the last note hit in the previous combo has its combo score decreased by four **combo score units**. If you resume a combo later, as your combo counter hits 6, that very note will have its combo score decreased by five **combo score units**.
-### Detailed score formulae:
+### Detailed score formulae
 **Base note score:** $frac{920000}{(note\textunderscore count)} \text{ (1)}$<br/>
 **Combo score unit:** $combo\_score\_unit = \frac{160000}{(note\textunderscore count)^2}\text{ (2)}$<br/>
 **Difference between the maximum and minimum points awarded by a note:** $frac{160000}{(note\textunderscore count)} \text{ (3)}$<br/>
@@ -28,7 +28,9 @@ If note count is odd:
 - the next note's score is decreased by $d_1 \times combo\textunderscore score\textunderscore unit$,
 - the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$;
 where
-$$\displaylines{d_1 + d_2 = cff\\ d_1 - d_2 = 0.75\\ cff = (note\_count) \div 4 + 1} \text{ (6)}$$
+$$\displaylines{d_1 + d_2 = cff;\\ d_1 - d_2 = 0.75;\\ cff = (note\textunderscore count) \div 4 + 1} \text{ (6)}$$
 otherwise:
 - the next note's score is decreased by $d \times combo\textunderscore score\textunderscore unit$,
 where $$d = (note\textunderscore count) \div 4 + 0.5 \text{ (7)}$$
+- Following that, all notes worth a constant point value:
+$$min\textunderscore note\textunderscore score = first\textunderscore note \textunderscore score - frac{160000}{note\textunderscore count} \text{ (8)}
