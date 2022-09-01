@@ -16,19 +16,19 @@ E.g. You achieved a combo of 200 before Failing a note. The next note hit will n
 3. The combo score's decreasing process carries over if you break a combo, but resumed it later.<br/>
 E.g. You achieved a combo of 5 before Failing a note. As per the rule mentioned in **1.**, the last note hit in the previous combo has its combo score decreased by four **combo score units**. If you resume a combo later, as your combo counter hits 6, that very note will have its combo score decreased by five **combo score units**.
 ### Detailed score formulae:
-**Base note score:** $920000 \over (note\textunderscore count)$ [1]  <br/>
-**Combo score unit:** $combo\_score\_unit = \frac{160000}{(note\textunderscore count)^2}$ [2]  <br/>
-**Difference between the maximum and minimum points awarded by a note:** $160000 \over (note\textunderscore count)$ [3]  <br/>
+**Base note score:** $920000 \over (note\textunderscore count) \text{ (1)}$<br/>
+**Combo score unit:** $combo\_score\_unit = \frac{160000}{(note\textunderscore count)^2 \text{ (2)}}$<br/>
+**Difference between the maximum and minimum points awarded by a note:** $160000 \over (note\textunderscore count) \text{ (3)}$<br/>
 **First note score:** Equals to the sum of [1] and [3], minus 0.5 **combo score units**.  
-$$first\textunderscore note\textunderscore score = \frac{920000}{note\textunderscore count}+\frac{160000}{note\textunderscore count}-\frac{80000}{note\textunderscore count^2}$$ [4]  
+$$first\textunderscore note\textunderscore score = \frac{920000}{note\textunderscore count}+\frac{160000}{note\textunderscore count}-\frac{80000}{note\textunderscore count^2 \text{ (4)}}$$
 **Following note scores:** Equals to [4] minus an appropriate multiple of **combo score unit**.  
-$$note\textunderscore score_i = first\textunderscore note\textunderscore score - i \times combo\textunderscore score\textunderscore unit\break where\text{ i} \leq \lfloor note\textunderscore count \div 2\rfloor$$ [5]  
+$$note\textunderscore score_i = first\textunderscore note\textunderscore score - i \times combo\textunderscore score\textunderscore unit\break where\text{ i} \leq \lfloor note\textunderscore count \div 2\rfloor \text{ (5)}$$  
 **Rapid combo score decrement:**
 If note count is odd:
 - the next note's score is decreased by $d_1 \times combo\textunderscore score\textunderscore unit$,
 - the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$;
 where
-$$\begin{cases}d_1 + d_2 = cff\break d_1 - d_2 = 0.75\break cff = (note\_count) \div 4 + 1\end{cases}$$ [6]
+$$\begin{cases}d_1 + d_2 = cff\break d_1 - d_2 = 0.75\break cff = (note\_count) \div 4 + 1\end{cases} \text{ (6)}$$
 otherwise:
 - the next note's score is decreased by $d \times combo\textunderscore score\textunderscore unit$,
-where $$d = (note\textunderscore count) \div 4 + 0.5$$
+where $$d = (note\textunderscore count) \div 4 + 0.5 \text{ (7)}$$
