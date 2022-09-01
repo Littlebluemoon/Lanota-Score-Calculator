@@ -23,7 +23,7 @@ E.g. You achieved a combo of 5 before Failing a note. As per the rule mentioned 
 $$first\textunderscore note\textunderscore score = \frac{920000}{note\textunderscore count}+\frac{160000}{note\textunderscore count}-\frac{80000}{note\textunderscore count^2} \text{ (4)}$$
 **Following note scores:** Equals to [4] minus an appropriate multiple of **combo score unit**.  
 $$\displaylines{note\textunderscore score_{i+1} = first\textunderscore note\textunderscore score - i \times combo\textunderscore score\textunderscore unit\\ where\text{ i} \leq \lfloor note\textunderscore count \div 2\rfloor} \text{ (5)}$$  
-**Rapid combo score decrement:**
+**Rapid combo score decrement:**<br/>
 If note count is odd:
 - the next note's score is decreased by $d_1 \times combo\textunderscore score\textunderscore unit$,
 - the note following that one has its score decreased by $d_2 \times combo\textunderscore score\textunderscore unit$;
@@ -33,4 +33,4 @@ otherwise:
 - the next note's score is decreased by $d \times combo\textunderscore score\textunderscore unit$,
 where $$d = (note\textunderscore count) \div 4 + 0.5 \text{ (7)}$$
 - Following that, all notes worth a constant point value:
-$$min\textunderscore note\textunderscore score = first\textunderscore note \textunderscore score - frac{160000}{note\textunderscore count} \text{ (8)}
+$$min\textunderscore note\textunderscore score = first\textunderscore note \textunderscore score - frac{160000}{note\textunderscore count} \text{ (8)}$$
