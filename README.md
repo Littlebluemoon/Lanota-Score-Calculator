@@ -16,9 +16,9 @@ E.g. You achieved a combo of 200 before Failing a note. The next note hit will n
 3. The combo score's decreasing process carries over if you break a combo, but resumed it later.<br/>
 E.g. You achieved a combo of 5 before Failing a note. As per the rule mentioned in **1.**, the last note hit in the previous combo has its combo score decreased by four **combo score units**. If you resume a combo later, as your combo counter hits 6, that very note will have its combo score decreased by five **combo score units**.
 ### Detailed score formulae
-**Base note score:** $frac{920000}{(note\textunderscore count)} \text{ (1)}$<br/>
-**Combo score unit:** $combo\_score\_unit = \frac{160000}{(note\textunderscore count)^2}\text{ (2)}$<br/>
-**Difference between the maximum and minimum points awarded by a note:** $frac{160000}{(note\textunderscore count)} \text{ (3)}$<br/>
+**Base note score:** $\frac{920000}{(note\textunderscore count)} \text{ (1)}$<br/>
+**Combo score unit:** $combo\textunderscore score\textunderscore unit = \frac{160000}{(note\textunderscore count)^2}\text{ (2)}$<br/>
+**Difference between the maximum and minimum points awarded by a note:** $\frac{160000}{(note\textunderscore count)} \text{ (3)}$<br/>
 **First note score:** Equals to the sum of [1] and [3], minus 0.5 **combo score units**.  
 $$first\textunderscore note\textunderscore score = \frac{920000}{note\textunderscore count}+\frac{160000}{note\textunderscore count}-\frac{80000}{note\textunderscore count^2} \text{ (4)}$$
 **Following note scores:** Equals to [4] minus an appropriate multiple of **combo score unit**.  
