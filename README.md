@@ -37,7 +37,7 @@ $$min\textunderscore note\textunderscore score = first\textunderscore note \text
 ### Requirements
 The program is written in Python 3.10, so Python 3.x is required to run it. No other packages is necessary.
 ### Components
-**lanota.py**: The main executable file.
+**lanota.py**: The main executable file.<br/>
 **notedata.csv**: The result file, containing data regarding note count, base note score, combo score unit, tune base note score, and score progression across the song.<br/>
 Score progression includes combo count, note score, cumulative score (exact / rounded in-game which might has minor errors).<br/>
 Will be created if not exist.
