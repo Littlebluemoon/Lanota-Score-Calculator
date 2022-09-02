@@ -32,7 +32,7 @@ otherwise:
 - the next note's score is decreased by $d \times combo\textunderscore score\textunderscore unit$,
 where $$d = (note\textunderscore count) \div 4 + 0.5 \text{ (7)}$$
 - Following that, all notes worth a constant point value:
-$$min\textunderscore note\textunderscore score = first\textunderscore note \textunderscore score - \frac{160000}{note\textunderscore count} \text{ (8)}$$
+$$min\textunderscore note\textunderscore score = \frac{960000}{note\textunderscore count} \text{ (8)}$$
 ## Program function
 ### Requirements
 The program is written in Python 3.10, so Python 3.x is required to run it. No other packages is necessary.
@@ -42,6 +42,6 @@ The program is written in Python 3.10, so Python 3.x is required to run it. No o
 Score progression includes combo count, note score, cumulative score (exact / rounded in-game which might has minor errors).<br/>
 Will be created if not exist.
 ### Usage
-Launch **lanota.py**.<br/>
+Compile **lanota.py**.<br/>
 Enter a single number, which is the note count of your chart.<br/>
 All the results mentioned above will be packed into **notedata.csv**.

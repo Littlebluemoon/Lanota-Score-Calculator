@@ -11,7 +11,7 @@ combo_diff = Decimal(160000 / note)
 # write point values
 f.write("note count,," + str(note))
 f.write("\nbase note score,," + str(base_note))
-# tune ~ 43.444444...%
+# tune = 10/23
 f.write("\ntune note score,," + str(base_note * Decimal(10/23)))
 f.write("\ncombo score unit,," + str(Decimal(combo_diff / note)) + "\n")
 # half the combo unit is deducted from first note
